@@ -188,6 +188,7 @@ button:hover {
         margin-top: 0.5rem;
         position: static;
         text-align: center;
+        width: 40%;
     }
 
     .hero-image {
