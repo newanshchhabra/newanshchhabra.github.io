@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitcount Grid Double', sans-serif;
+    background-color: #ffffff;
+}
+
+body {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+/* Navigation Bar */
+nav {
+    position: relative;
+    height: 100px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* Ticker Wrapper */
+.ticker-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ticker Content */
+.ticker-content {
+    display: flex;
+    width: max-content;
+    animation: ticker-loop 20s linear infinite;
+}
+
+/* Ticker Items */
+.ticker-item {
+    white-space: nowrap;
+    padding: 30px 2rem 0 2rem;
+    font-size: 4rem;
+    color: #ff0000;
+    background: #ffffff;
+    font-weight: normal;
+}
+
+/* Ticker Animation */
+@keyframes ticker-loop {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: #000000;
+    margin-top: 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 85vh;
+    padding: 1.5rem calc((100vw - 1300px) / 2);
+    position: relative;
+}
+
+/* Column Left */
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #ffffff;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+}
+
+.column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: rgb(132, 0, 255);
+    font-weight: normal;
+}
+
+.column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'DM Sans', sans-serif;
+    color: #000000;
+}
+
+/* Column Right */
+.column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #000000;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+}
+
+.column-right h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: rgb(132, 0, 255);
+    font-weight: normal;
+}
+
+.column-right p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'DM Sans', sans-serif;
+    color: #000000;
+}
+
+/* Button Row for Side-by-Side Buttons */
+.button-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.button-row a {
+    text-decoration: none;
+}
+
+/* Buttons */
+button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    color: #000000;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 1px solid #000000;
+}
+
+button:hover {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/* Bottom Right Image */
+.column-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem 1.5rem;
+}
+
+.column-bottom h2 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #ff0000;
+    font-weight: normal;
+    text-align: right;
+    width: 40%;
+}
+
+.hero-image {
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        height: auto;
+    }
+
+    .column-bottom {
+        margin-top: 0.5rem;
+        position: static;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 40%;
+    }
+
+    .button-row {
+        justify-content: center;
+    }
+
+    .column-left,
+    .column-right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .column-left h1,
+    .column-right h1 {
+        font-size: 2.5rem;
+    }
+
+    .column-left p,
+    .column-right p {
+        font-size: 1.2rem;
+    }
+}
